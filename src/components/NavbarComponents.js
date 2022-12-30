@@ -32,12 +32,12 @@ export const OutlineButton = styled(Link)`
     color: #41e2ba;
     border: 2px solid black;
     border-color: #41e2ba;
-    border-radius: 5px;
+    border-radius: 6px;
     margin-right: 24px;
 
     /* hover animation */
     &:hover {
-        transition: all 0.2s ease-in-out;
+        transition: all 0.4s ease-in-out;
         background: #41e2ba;
         color: #2b2d42;
     }
@@ -52,12 +52,12 @@ export const FilledButton = styled(Link)`
     color: #1e1e1e;
     border: 2px solid black;
     border-color: #41e2ba;
-    border-radius: 5px;
+    border-radius: 6px;
     margin-right: 24px;
 
     /* hover animation */
     &:hover {
-        transition: all 0.2s ease-in-out;
+        transition: all 0.4s ease-in-out;
         background: #2b2d42;
         color: #41e2ba;
     }
