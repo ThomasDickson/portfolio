@@ -14,19 +14,19 @@ function Projects() {
       <T4>Below is a collection of my favourite projects I've developed over the years. Each project contains images as well as the languages and techniques used in development. </T4>
       <Cards>
         <Card>
-          <CardImage src={ flydream } alt="Fly Dream Air Image"/>
+          <CardImage src={flydream} alt="Fly Dream Air Image"/>
           <T3>FlyDreamAir Website</T3>
           <T4>An interactive, full-stack website for an airline developed using ReactJS and Google's Firebase.</T4>
           <OutlineButton>See more</OutlineButton>
         </Card>
         <Card>
-          <CardImage src={ khxmas } alt="Kara and Harvey's Xmas Adventure Image"/>
+          <CardImage src={khxmas} alt="Kara and Harvey's Xmas Adventure Image"/>
           <T3>Kara and Harvey's Xmas Adventure</T3>
           <T4>A 2D Adventure game created using Godot Engine and GDScript.</T4>
           <OutlineButton>See more</OutlineButton>
         </Card>
         <Card>
-          <CardImage src={ fk } alt="fast-keys Image"/>
+          <CardImage src={fk} alt="fast-keys Image"/>
           <T3>fast-keys</T3>
           <T4>A static typing speed test site developed using HTML, CSS, and JavaScript</T4>
           <OutlineButton>See more</OutlineButton>
