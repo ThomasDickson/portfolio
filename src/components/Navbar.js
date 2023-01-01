@@ -2,14 +2,15 @@ import React from 'react'
 import { Nav, 
          NavMenu,
          Logo, 
-         OutlineButton, 
-         FilledButton 
-} from './NavbarComponents'
+} from './NavbarComponents';
+
+
+import { FilledButton, OutlineButton } from './Buttons';
 
 function Navbar() {
   return (
     <Nav>
-      <Logo>thomasdickson.</Logo>
+      <Logo to="/">thomasdickson.</Logo>
       <NavMenu>
         <OutlineButton to="/about">about me</OutlineButton>
         <OutlineButton to="/projects">projects</OutlineButton>

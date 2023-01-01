@@ -20,45 +20,4 @@ export const Logo = styled(Link)`
     text-decoration: none;
     font-weight: bold;
     color: #41e2ba;
-    margin-left: 24px;
-`
-
-export const OutlineButton = styled(Link)`
-    font-family: 'Ubuntu';
-    text-decoration: none;
-    font-weight: 500;
-    background-color: transparent;
-    padding: 10px;
-    color: #41e2ba;
-    border: 2px solid black;
-    border-color: #41e2ba;
-    border-radius: 6px;
-    margin-right: 24px;
-
-    /* hover animation */
-    &:hover {
-        transition: all 0.4s ease-in-out;
-        background: #41e2ba;
-        color: #2b2d42;
-    }
-`
-
-export const FilledButton = styled(Link)`
-    font-family: 'Ubuntu';
-    text-decoration: none;
-    font-weight: 500;
-    background-color: #41e2ba;
-    padding: 10px;
-    color: #1e1e1e;
-    border: 2px solid black;
-    border-color: #41e2ba;
-    border-radius: 6px;
-    margin-right: 24px;
-
-    /* hover animation */
-    &:hover {
-        transition: all 0.4s ease-in-out;
-        background: #2b2d42;
-        color: #41e2ba;
-    }
 `
