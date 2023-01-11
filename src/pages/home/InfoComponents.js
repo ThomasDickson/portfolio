@@ -12,6 +12,16 @@ export const Line = styled.hr`
     border-color: white;
 `
 
+export const Portrait = styled.img`
+    border-radius: 50%;
+    height: 280px;
+    margin-left: 50px;
+
+    @media only screen and (max-width: 1000px) {
+        display: none;
+    }
+`
+
 export const IconContainer = styled.div`
     display: flex;
     flex-direction: row;
