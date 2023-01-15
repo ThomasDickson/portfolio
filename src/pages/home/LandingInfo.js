@@ -27,7 +27,7 @@ function LandingInfo() {
           </Icon>
         </IconContainer>
       </InfoContainer>
-      <Portrait src={portrait}/>
+      {/*<Portrait src={portrait}/>*/}
     </div>
   )
 }
