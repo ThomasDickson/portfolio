@@ -1,6 +1,5 @@
 import React from 'react'
 import { FiGithub, FiInstagram, FiLinkedin} from 'react-icons/fi'
-import portrait from '../../images/selfie.jpg';
 import { InfoContainer, Line, Portrait, IconContainer, Icon } from './InfoComponents'
 import { T1, T2, T3, T4 } from '../../components/Typography';
 
@@ -19,11 +18,11 @@ function LandingInfo() {
           <Icon href="https://github.com/ThomasDickson" target="_blank">
             <FiGithub size={30}/>
           </Icon>
-          <Icon href="https://instagram.com/tomdickson__" target="_blank">
-            <FiInstagram size={30}/>
-          </Icon>
           <Icon href="https://www.linkedin.com/in/thomas-dickson-6a4a0a229/" target="_blank">
             <FiLinkedin size={30}/>
+          </Icon>
+          <Icon href="https://instagram.com/tomdickson__" target="_blank">
+            <FiInstagram size={30}/>
           </Icon>
         </IconContainer>
       </InfoContainer>

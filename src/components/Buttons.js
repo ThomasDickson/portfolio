@@ -1,7 +1,8 @@
 import styled from "styled-components";
-import { NavLink as Link } from "react-router-dom";
 
-export const OutlineButton = styled(Link)`
+export const OutlineButton = styled.div`
+    cursor: pointer;
+
     /* Font Settings */
     font-family: 'Ubuntu';
     text-decoration: none;
@@ -30,7 +31,9 @@ export const OutlineButton = styled(Link)`
     }
 `
 
-export const FilledButton = styled(Link)`
+export const FilledButton = styled.div`
+    cursor: pointer;
+
     /* Font Settings */
     font-family: 'Ubuntu';
     text-decoration: none;
