@@ -1,5 +1,5 @@
 import React from 'react'
-import { Cards, Card, CardImage} from './ProjectComponents'
+import { Cards, Card, CardImage} from '../../components/Cards';
 import { T2, T3, T4 } from '../../components/Typography';
 import { OutlineButton } from '../../components/Buttons'
 import { projects as data } from './ProjectData';

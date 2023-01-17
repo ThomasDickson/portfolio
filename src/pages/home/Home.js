@@ -1,8 +1,9 @@
-import React, { useRef } from 'react'
+import React from 'react'
 import LandingInfo from './LandingInfo'
 import About from '../about/About'
 import Projects from '../projects/Projects'
-
+import Contact from '../contact/Contact'
+import Footer from '../../components/Footer'
 
 function Home() {
   return (
@@ -11,11 +12,15 @@ function Home() {
         <LandingInfo />
       </div>
       <div id="about-wrapper">
-        <About id="about"/>
+        <About />
       </div>
       <div id="projects-wrapper">
         <Projects />
       </div>
+      <div id="contact-wrapper">
+        <Contact />
+      </div>
+      <Footer />
     </div>
   )
 }

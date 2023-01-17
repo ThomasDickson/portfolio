@@ -1,6 +1,7 @@
 import React from 'react'
 import { FiGithub, FiInstagram, FiLinkedin} from 'react-icons/fi'
-import { InfoContainer, Line, Portrait, IconContainer, Icon } from './InfoComponents'
+import { InfoContainer, Line, Portrait} from './InfoComponents'
+import { IconContainer, Icon } from '../../components/Icons'
 import { T1, T2, T3, T4 } from '../../components/Typography';
 
 function LandingInfo() {
