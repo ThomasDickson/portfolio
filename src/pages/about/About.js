@@ -1,7 +1,19 @@
 import React from 'react'
+import styled from 'styled-components'
 import RatingBar from '../../components/RatingBar';
 import { Card } from '../../components/Cards';
 import { T1, T2, T4} from '../../components/Typography';
+
+const Grid = styled.div`
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 24px;
+
+  @media only screen and (max-width: 860px) {
+      grid-auto-flow: row;
+      row-gap: 24px;
+  }
+`
 
 function About() {
   return (
@@ -10,7 +22,7 @@ function About() {
       <div className="text-box">
         <T4>Hi! <b>I'm Thomas Dickson, </b> a third year Computer Science student at the <b>University of Wollongong, NSW, Australia.</b></T4>
       </div>
-      <div className="skills" style={{display: "grid", gridAutoFlow: "column", columnGap: "24px"}}>
+      <Grid>
         <Card className="languages">
           <T2>Languages</T2>
           <RatingBar desc="C++" percent={"90%"}/>
@@ -31,7 +43,7 @@ function About() {
           <RatingBar desc="MongoDB" percent={"40%"}/>
           <RatingBar desc="Agile" percent={"40%"}/>
         </Card>
-      </div>
+      </Grid>
     </div>
   )
 }
