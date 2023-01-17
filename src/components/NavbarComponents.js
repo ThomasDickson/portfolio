@@ -20,15 +20,6 @@ export const NavMenu = styled.div`
     }
 `
 
-export const NavMenu2 = styled.div`
-    display: none;
-    color: #41e2ba;
-
-    @media only screen and (max-width: 600px) {
-        display: block;
-    }
-`
-
 export const Logo = styled(Link)`
     font-size: 30px;
     text-decoration: none;

@@ -1,12 +1,10 @@
 import React from 'react'
 import { Nav, 
          NavMenu,
-         NavMenu2,
          Logo, 
 } from './NavbarComponents';
 
 import { FilledButton, OutlineButton } from './Buttons';
-import { FiMenu } from 'react-icons/fi'
 
 import { Link } from 'react-scroll'
 
@@ -28,9 +26,6 @@ function Navbar() {
         <FilledButton>hire me</FilledButton>
       </Link>
       </NavMenu>
-      <NavMenu2>
-        <FiMenu size={32}/>
-      </NavMenu2>
     </Nav>
   )
 }
