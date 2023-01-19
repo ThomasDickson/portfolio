@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const T1 = styled.span`
-    font-size: 64px;
+    font-size: 80px;
     font-family: 'Ubuntu';
     font-weight: 700;
     color: #41E2BA;
@@ -12,7 +12,7 @@ export const T1 = styled.span`
 `
 
 export const T2 = styled.span`
-    font-size: 32px;
+    font-size: 40px;
     font-family: 'Ubuntu Mono';
     font-weight: 400;
     color: white;
@@ -24,7 +24,7 @@ export const T2 = styled.span`
 `
 
 export const T3 = styled.span`
-    font-size: 24px;
+    font-size: 30px;
     font-family: 'Ubuntu';
     font-weight: 500;
     color: white;
@@ -35,7 +35,7 @@ export const T3 = styled.span`
 `
 
 export const T4 = styled.p`
-    font-size: 16px;
+    font-size: 20px;
     font-family: 'Ubuntu';
     font-weight: 300;
     color: white;
