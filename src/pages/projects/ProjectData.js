@@ -50,7 +50,7 @@ export const projects = [
       id: 3,
       title: "fast-keys",
       brief: "A static typing speed test site developed using HTML, CSS, and JavaScript",
-      desc: "",
+      desc: "A static typing speed test site developed using HTML, CSS, and JavaScript. I am currently working on the colour scheme of the website, as well as increasing the efficiency and accuracy of my current speed tracking algorithm.",
       image: fk,
       alt: "fast-keys Website Image",
       redir: "fast-keys",
