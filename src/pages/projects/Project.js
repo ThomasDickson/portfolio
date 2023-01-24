@@ -29,6 +29,7 @@ function Project() {
   const [alt, setImgAlt] = useState("");
   const [desc, setDesc] = useState("");
   const [git, setGit] = useState("");
+  const [live, setLive] = useState("");
   const [langs, setLangs] = useState([]);
   
   useEffect(() => {
@@ -44,6 +45,9 @@ function Project() {
 
           if(object.hasOwnProperty('git'))
             setGit(object.git);
+
+          if(object.hasOwnProperty('live'))
+            setLive(object.live)
 
           setLangs(object.langs);
         }
@@ -66,12 +70,16 @@ function Project() {
               )
             })}
           </Card>
-          <br />
-          {git && (
-            <FilledButton as={'a'} href={git}>View source</FilledButton>
-          )}
+          <div style={{display: "flex", gap: "12px", marginTop: "12px"}}>
+            {git && (
+                <FilledButton as={'a'} href={git} target="_blank">View source</FilledButton>
+            )}
+            {live && (
+                <FilledButton as={'a'} href={live} target="_blank">View live</FilledButton>
+            )}
+          </div>
         </div>
-        <img src={image} alt={alt} style={{width: "100%"}}/>
+        <img src={image} alt={alt} style={{width: "100%", borderRadius: "9px"}}/>
       </Grid>
     </div>
   )
