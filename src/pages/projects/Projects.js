@@ -7,17 +7,21 @@ import { projects as data } from './ProjectData';
 import { NavLink as Link } from 'react-router-dom';
 
 const Container = styled.div`
-  margin-top: 200px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  margin: 200px auto;
+  width: 70%;
+
+  @media only screen and (max-width: 600px) {
+    width: 100%;
+  }
 `
 
 function Projects() {
   return (
     <Container>
-      <T1>Projects</T1>
-      <T4>Below is a collection of my favourite projects I've developed over the years. Each project contains images as well as the languages and techniques used in development. </T4>
+      <T1 style={{alignSelf: "center"}}>Projects</T1>
+      <T4>Below is a collection of my favourite personal projects that I've been developed during my time as a programmer.</T4>
       <Cards>
         {data.map(post => {
           return (

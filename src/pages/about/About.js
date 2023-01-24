@@ -19,6 +19,13 @@ import { SiCplusplus,
          SiLinux } from 'react-icons/si'
 import { IconContainer, IconCaption } from '../../components/Icons'
 
+const Container = styled.div`
+  margin: 200px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
+
 const DynamicContainer = styled(IconContainer)`
   @media only screen and (max-width: 860px) {
         grid-template-rows: 1fr 1fr;
@@ -39,7 +46,7 @@ function About() {
   const iconSize = useRef(window.innerWidth).current > 860 ? 85: 50;
   
   return (
-    <div style={{marginTop: "200px", display: "flex", flexDirection: "column", alignItems: "center"}}>
+    <Container>
       <T1>About Me</T1>
       <div className="text-box">
         <T4>Hi! <b>I'm Thomas Dickson, </b> a third year Computer Science student at the <b>University of Wollongong, NSW, Australia.</b></T4>
@@ -104,7 +111,7 @@ function About() {
           </DynamicContainer>
         </Card>
       </Grid>
-    </div>
+    </Container>
   )
 }
 

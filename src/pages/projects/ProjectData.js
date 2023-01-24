@@ -11,7 +11,21 @@ export const projects = [
       image: flydream,
       alt: "FlyDreamAir Website Image",
       redir: "flydreamair",
-      git: "https://github.com/ThomasDickson/booking-management-system"
+      git: "https://github.com/ThomasDickson/booking-management-system",
+      langs: [
+        {
+          lang: "JavaScript",
+          level: "91.9%"
+        },
+        {
+          lang: "HTML",
+          level: "4.5%"
+        },
+        {
+          lang: "CSS",
+          level: "3.6%"
+        }
+      ]
     },
     {
       id: 2,
@@ -20,7 +34,17 @@ export const projects = [
       desc: "Kara and Harvey's Xmas Adventure is 2D Adventure game created as a Christmas gift for a loved one. The game was developed using the Godot Engine and the GDScript language (syntactically similar to Python). It features 2D vector physics for user and entity movement, state machines and AI for entity behaviour, as well as state-dependent sprite animations and dynamically rendered JSON character dialogue.",
       image: khxmas,
       alt: "Kara and Harvey's Xmas Adventure Image",
-      redir: "kara-and-harvey-adventure"
+      redir: "kara-and-harvey-adventure",
+      langs: [
+        {
+          lang: "GDScript",
+          level: "95%"
+        },
+        {
+          lang: "JSON",
+          level: "5%"
+        }
+      ]
     },
     {
       id: 3,
@@ -30,6 +54,20 @@ export const projects = [
       image: fk,
       alt: "fast-keys Website Image",
       redir: "fast-keys",
-      git: "https://github.com/ThomasDickson/fast-keys"
+      git: "https://github.com/ThomasDickson/fast-keys",
+      langs: [
+        {
+          lang: "JavaScript",
+          level: "61%"
+        },
+        {
+          lang: "CSS",
+          level: "25.3%"
+        },
+        {
+          lang: "HTML",
+          level: "13.7%"
+        }
+      ]
     }
   ]

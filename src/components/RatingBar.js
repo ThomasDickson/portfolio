@@ -12,7 +12,7 @@ const BackgroundBar = styled.div`
     margin-left: 12px;
     padding: 3px;
     border-radius: 12px;
-    width: 250px;
+    width: 400px;
     height: 12px;
     background-color: #21705C;
 `
