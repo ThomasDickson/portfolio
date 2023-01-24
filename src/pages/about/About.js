@@ -1,21 +1,43 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import styled from 'styled-components'
+
 import RatingBar from '../../components/RatingBar';
 import { Card } from '../../components/Cards';
-import { T1, T2, T4} from '../../components/Typography';
+import { T1, T2, T3, T4} from '../../components/Typography';
+
+import { SiCplusplus, 
+         SiJavascript, 
+         SiHtml5, 
+         SiCss3, 
+         SiJava, 
+         SiMysql, 
+         SiPython,
+         SiReact,
+         SiGithub,
+         SiFigma,
+         SiMongodb,
+         SiLinux } from 'react-icons/si'
+import { IconContainer, IconCaption } from '../../components/Icons'
+
+const DynamicContainer = styled(IconContainer)`
+  @media only screen and (max-width: 860px) {
+        grid-template-rows: 1fr 1fr;
+  }
+`
 
 const Grid = styled.div`
   display: grid;
-  grid-auto-flow: column;
-  column-gap: 24px;
+  grid-auto-flow: row;
+  gap: 24px;
 
   @media only screen and (max-width: 860px) {
       grid-auto-flow: row;
-      row-gap: 24px;
   }
 `
 
 function About() {
+  const iconSize = useRef(window.innerWidth).current > 860 ? 85: 50;
+  
   return (
     <div style={{marginTop: "200px", display: "flex", flexDirection: "column", alignItems: "center"}}>
       <T1>About Me</T1>
@@ -25,23 +47,61 @@ function About() {
       <Grid>
         <Card className="languages">
           <T2>Languages</T2>
-          <RatingBar desc="C++" percent={"90%"}/>
-          <RatingBar desc="HTML" percent={"90%"}/>
-          <RatingBar desc="CSS" percent={"90%"}/>
-          <RatingBar desc="JavaScript" percent={"75%"}/>
-          <RatingBar desc="MySQL" percent={"70%"}/>
-          <RatingBar desc="Java" percent={"60%"}/>
-          <RatingBar desc="Python" percent={"20%"}/>
+          <DynamicContainer>
+            <IconCaption>
+              <SiCplusplus size={iconSize}/>
+              <T4>C++</T4>
+            </IconCaption>
+            <IconCaption>
+              <SiHtml5 size={iconSize}/>
+              <T4>HTML</T4>
+            </IconCaption>
+            <IconCaption>
+              <SiCss3 size={iconSize}/>
+              <T4>CSS</T4>
+            </IconCaption>
+            <IconCaption>
+              <SiJavascript size={iconSize}/>
+              <T4>JavaScript</T4>
+            </IconCaption>
+            <IconCaption>
+              <SiJava size={iconSize}/>
+              <T4>Java</T4>
+            </IconCaption>
+            <IconCaption>
+              <SiPython size={iconSize}/>
+              <T4>Python</T4>
+            </IconCaption>
+          </DynamicContainer>
         </Card>
         <Card className="tech">
           <T2>Technologies/Frameworks</T2>
-          <RatingBar desc="ReactJS" percent={"90%"}/>
-          <RatingBar desc="Photoshop" percent={"90%"}/>
-          <RatingBar desc="GitHub" percent={"90%"}/>
-          <RatingBar desc="Figma" percent={"70%"}/>
-          <RatingBar desc="Linux/Unix" percent={"60%"}/>
-          <RatingBar desc="MongoDB" percent={"40%"}/>
-          <RatingBar desc="Agile" percent={"40%"}/>
+          <DynamicContainer>
+            <IconCaption>
+              <SiReact size={iconSize}/>
+              <T4>ReactJS</T4>
+            </IconCaption>
+            <IconCaption>
+              <SiMysql size={iconSize}/>
+              <T4>MySQL</T4>
+            </IconCaption>
+            <IconCaption>
+              <SiMongodb size={iconSize}/>
+              <T4>MongoDB</T4>
+            </IconCaption>
+            <IconCaption>
+              <SiGithub size={iconSize}/>
+              <T4>GitHub</T4>
+            </IconCaption>
+            <IconCaption>
+              <SiFigma size={iconSize}/>
+              <T4>Figma</T4>
+            </IconCaption>
+            <IconCaption>
+              <SiLinux size={iconSize}/>
+              <T4>Linux/Unix</T4>
+            </IconCaption>
+          </DynamicContainer>
         </Card>
       </Grid>
     </div>

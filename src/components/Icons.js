@@ -1,10 +1,23 @@
 import styled from "styled-components";
 
 export const IconContainer = styled.div`
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: left;
     margin-top: 10px;
     gap: 10px;
+`
+
+export const IconCaption = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+    color: white;
+
+    @media only screen and (max-width: 860px) {
+        width: 100px;
+    }
 `
 
 export const Icon = styled.a`

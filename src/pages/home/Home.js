@@ -3,7 +3,6 @@ import LandingInfo from './LandingInfo'
 import About from '../about/About'
 import Projects from '../projects/Projects'
 import Contact from '../contact/Contact'
-import Footer from '../../components/Footer'
 
 function Home() {
   return (
@@ -20,7 +19,6 @@ function Home() {
       <div id="contact-wrapper">
         <Contact />
       </div>
-      <Footer />
     </div>
   )
 }
