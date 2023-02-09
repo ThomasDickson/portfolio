@@ -1,8 +1,32 @@
 import React from 'react'
+import styled from 'styled-components';
+
 import { FiGithub, FiInstagram, FiLinkedin} from 'react-icons/fi'
-import { InfoContainer, Line, Portrait} from './InfoComponents'
 import { IconContainer, Icon } from '../../components/Icons'
 import { T1, T2, T3, T4 } from '../../components/Typography';
+
+const InfoContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    height: 50vh;
+`
+
+const Line = styled.hr`
+    width: 100%;
+    border: px inset;
+    border-color: white;
+`
+
+const Portrait = styled.img`
+    border-radius: 50%;
+    height: 280px;
+    margin-left: 50px;
+
+    @media only screen and (max-width: 1000px) {
+        display: none;
+    }
+`
 
 function LandingInfo() {
   return (
