@@ -96,17 +96,11 @@ function Contact() {
     <Container>
       <Form ref={form} onSubmit={sendEmail}>
         <T1>Contact Me</T1>
-        <label>
-          <T4>Name</T4>
-        </label>
+        <T4>Name</T4>
         <Input type="text" name="user_name"/>
-        <label>
-          <T4>Email Address</T4>
-        </label>
+        <T4>Email Address</T4>
         <Input type="email" name="user_email"/>
-        <label>
-          <T4>Message</T4>
-        </label>
+        <T4>Message</T4>
         <TextArea name="message"/>
         <Submit type="submit" value="Send Message"/>
       </Form>
