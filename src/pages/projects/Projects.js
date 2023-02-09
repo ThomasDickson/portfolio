@@ -21,7 +21,7 @@ function Projects() {
   return (
     <Container>
       <T1 style={{alignSelf: "center"}}>Projects</T1>
-      <T4>Below is a collection of my favourite personal projects that I've been developed during my time as a programmer.</T4>
+      <T4>Below is a collection of my favourite personal projects that I've developed during my time as a programmer.</T4>
       <Cards>
         {data.map(post => {
           return (
