@@ -1,7 +1,8 @@
 import React from 'react'
 import styled from 'styled-components';
+
 import { Cards, Card, CardImage} from '../../components/Cards';
-import { T1, T2, T3, T4 } from '../../components/Typography';
+import { T1, T3, T4 } from '../../components/Typography';
 import { OutlineButton } from '../../components/Buttons'
 import { projects as data } from './ProjectData';
 import { NavLink as Link } from 'react-router-dom';
@@ -21,7 +22,7 @@ function Projects() {
   return (
     <Container>
       <T1 style={{alignSelf: "center"}}>Projects</T1>
-      <T4>Below is a collection of my favourite personal projects that I've developed during my time as a programmer.</T4>
+      <p/>
       <Cards>
         {data.map(post => {
           return (

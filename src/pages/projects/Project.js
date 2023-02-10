@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import styled from 'styled-components';
 
-import { T1, T2, T3, T4 } from '../../components/Typography'
+import Navbar from '../../components/Navbar';
+import { T2, T4 } from '../../components/Typography'
 import { FilledButton } from '../../components/Buttons';
 import { Card } from '../../components/Cards';
 import RatingBar from '../../components/RatingBar'
@@ -57,6 +58,7 @@ function Project() {
   })  
   return (
     <div className="project">
+      <Navbar buttons={false}/>
       <Grid>
         <div className="info-box">
           <T2>{title}</T2>
