@@ -7,7 +7,7 @@ export const projects = [
       id: 1,
       title: "fast-keys",
       brief: "A static typing speed test site developed using HTML, CSS, and JavaScript",
-      desc: "A static typing speed test site developed using HTML, CSS, and JavaScript. I am currently working on the colour scheme of the website, as well as increasing the efficiency and accuracy of my current speed tracking algorithm.",
+      desc: "A static typing speed test site developed using HTML, CSS, and JavaScript. I am currently working on the colour scheme of the website, as well as fixing some small bugs when calculating accuracy with my current algorithm.",
       image: fk,
       alt: "fast-keys Website Image",
       redir: "fast-keys",
@@ -16,15 +16,15 @@ export const projects = [
       langs: [
         {
           lang: "JavaScript",
-          level: "61%"
+          level: "70.1%"
         },
         {
           lang: "CSS",
-          level: "25.3%"
+          level: "19.7%"
         },
         {
           lang: "HTML",
-          level: "13.7%"
+          level: "10.2%"
         }
       ]
     },
