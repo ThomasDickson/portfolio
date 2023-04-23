@@ -9,6 +9,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Home />}/>
         <Route exact path="/:url" element={<Project />}/>
+        {/*test*/}
       </Routes>
       <Footer />
     </BrowserRouter>
