@@ -1,9 +1,6 @@
 import React, { useRef } from 'react'
 import styled from 'styled-components'
-
-import RatingBar from '../../components/RatingBar';
-import { Card } from '../../components/Cards';
-import { T1, T2, T3, T4} from '../../components/Typography';
+import mha from '../../images/mbmgbmvgkbkvkdjtqxsg.png'
 
 import { SiCplusplus, 
          SiJavascript, 
@@ -17,100 +14,106 @@ import { SiCplusplus,
          SiFigma,
          SiMongodb,
          SiLinux } from 'react-icons/si'
-import { IconContainer, IconCaption } from '../../components/Icons'
-
-const Container = styled.div`
-  margin: 200px auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-`
-
-const DynamicContainer = styled(IconContainer)`
-  @media only screen and (max-width: 860px) {
-        grid-template-rows: 1fr 1fr;
-  }
-`
-
-const Grid = styled.div`
-  display: grid;
-  grid-auto-flow: row;
-  gap: 24px;
-
-  @media only screen and (max-width: 860px) {
-      grid-auto-flow: row;
-  }
-`
+import { Box, Card, CardBody, CardFooter, Container, HStack, Heading, Image, SimpleGrid, Stack, Tag, TagLabel, Text } from '@chakra-ui/react';
 
 function About() {
   const iconSize = useRef(window.innerWidth).current > 860 ? 85: 50;
   
   return (
-    <Container>
-      <T1>About Me</T1>
-      <div className="text-box">
-        <T4>Hi! <b>I'm Thomas Dickson, </b> a third year Computer Science student at the <b>University of Wollongong, NSW, Australia.</b></T4>
-      </div>
-      <Grid>
-        <Card className="languages">
-          <T2>Languages</T2>
-          <DynamicContainer>
-            <IconCaption>
+    <Container maxW='7xl' h='8xl'>
+      <Heading as='h2' fontSize='5xl'>About Me</Heading>
+      <SimpleGrid columns={{base: 1, md: 2}}>
+        <Box>
+        < Text fontSize='xl'>Hi! I'm Thomas Dickson, a third year Computer Science student at the University of Wollongong, NSW, Australia.</Text>      
+        </Box>
+        <Box>
+          <Heading as='h3' fontSize='3xl'>Languages</Heading>
+          <SimpleGrid columns={{base: 3, md:6}} spacing={5} p={4}>
+            <Box>
               <SiCplusplus size={iconSize}/>
-              <T4>C++</T4>
-            </IconCaption>
-            <IconCaption>
-              <SiHtml5 size={iconSize}/>
-              <T4>HTML</T4>
-            </IconCaption>
-            <IconCaption>
-              <SiCss3 size={iconSize}/>
-              <T4>CSS</T4>
-            </IconCaption>
-            <IconCaption>
-              <SiJavascript size={iconSize}/>
-              <T4>JavaScript</T4>
-            </IconCaption>
-            <IconCaption>
+              <Text>C++</Text>
+            </Box>
+            <Box>
+                <SiHtml5 size={iconSize}/>
+                <Text>HTML</Text>
+            </Box>
+            <Box>
+                <SiCss3 size={iconSize}/>
+                <Text>CSS</Text>
+            </Box>
+            <Box>
+                <SiJavascript size={iconSize}/>
+                <Text>JavaScript</Text>
+            </Box>
+            <Box>
               <SiJava size={iconSize}/>
-              <T4>Java</T4>
-            </IconCaption>
-            <IconCaption>
+              <Text>Java</Text>
+            </Box>
+            <Box>
               <SiPython size={iconSize}/>
-              <T4>Python</T4>
-            </IconCaption>
-          </DynamicContainer>
-        </Card>
-        <Card className="tech">
-          <T2>Technologies/Frameworks</T2>
-          <DynamicContainer>
-            <IconCaption>
+              <Text>Python</Text>
+            </Box>
+          </SimpleGrid>
+          <Heading as='h3' fontSize='3xl'>Technologies/Frameworks</Heading>
+          <SimpleGrid columns={{base: 3, md:6}} spacing={5} p={4}>
+            <Box>
               <SiReact size={iconSize}/>
-              <T4>ReactJS</T4>
-            </IconCaption>
-            <IconCaption>
+              <Text>ReactJS</Text>
+            </Box>
+            <Box>
               <SiMysql size={iconSize}/>
-              <T4>MySQL</T4>
-            </IconCaption>
-            <IconCaption>
+              <Text>MySQL</Text>
+            </Box>
+            <Box>  
               <SiMongodb size={iconSize}/>
-              <T4>MongoDB</T4>
-            </IconCaption>
-            <IconCaption>
+              <Text>MongoDB</Text>
+            </Box>
+            <Box>
               <SiGithub size={iconSize}/>
-              <T4>GitHub</T4>
-            </IconCaption>
-            <IconCaption>
+              <Text>GitHub</Text>
+            </Box>
+            <Box>
               <SiFigma size={iconSize}/>
-              <T4>Figma</T4>
-            </IconCaption>
-            <IconCaption>
+              <Text>Figma</Text>
+            </Box>
+            <Box>
               <SiLinux size={iconSize}/>
-              <T4>Linux/Unix</T4>
-            </IconCaption>
-          </DynamicContainer>
-        </Card>
-      </Grid>
+              <Text>Linux/Unix</Text>
+            </Box>
+          </SimpleGrid>
+        </Box>
+      </SimpleGrid>
+      <Heading as='h3' fontSize='3xl'>Experience</Heading>
+      
+      <Card
+        direction='row'
+        variant='outline'
+      >
+        <Image 
+            maxW={{ base: '100%', sm: '200px' }}
+            src={mha}
+            alt='MediaHub Australia Logo'
+          />
+
+        <Stack>
+          <CardBody>
+            <Heading size='lg'>MediaHub Australia</Heading>
+            <Heading size='md'>Junior Software Engineer</Heading>
+            <Text size='md'>
+              Building and maintaining a full-stack Python web application. Implementing C# and PHP scripts for broadcast tasks.
+            </Text>
+          </CardBody>
+          <CardFooter>
+            <HStack spacing={4}>
+              {['C#', 'Python', 'PHP', 'SQL', 'Unix'].map((content) => (
+                <Tag size='md' key={content} variant='subtle' colorScheme='blue'>
+                  <TagLabel>{content}</TagLabel>
+                </Tag>
+              ))}
+            </HStack>
+          </CardFooter>
+        </Stack>
+      </Card>
     </Container>
   )
 }

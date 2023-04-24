@@ -5,9 +5,11 @@ import Projects from '../projects/Projects'
 import Contact from '../contact/Contact'
 import Navbar from '../../components/Navbar'
 
+import { Stack } from '@chakra-ui/react'
+
 function Home() {
   return (
-    <div className="home">
+    <Stack className="home">
       <Navbar buttons={true}/>
       <div id="landing-wrapper">
         <LandingInfo />
@@ -15,13 +17,14 @@ function Home() {
       <div id="about-wrapper">
         <About />
       </div>
+      {/*
       <div id="projects-wrapper">
         <Projects />
       </div>
       <div id="contact-wrapper">
         <Contact />
-      </div>
-    </div>
+      </div>*/}
+    </Stack>
   )
 }
 
