@@ -22,6 +22,38 @@ function Projects() {
   return (
     <Container>
       <T1 style={{alignSelf: "center"}}>Projects</T1>
+       {/*
+      <Heading as='h3' fontSize='5xl'>Experience</Heading>
+        
+        <Card
+          direction='row'
+          variant='outline'
+        >
+          <Image 
+              maxW={{ base: '100%', sm: '200px' }}
+              src={mha}
+              alt='MediaHub Australia Logo'
+          />
+          <Stack>
+            <CardBody>
+              <Heading size='lg'>MediaHub Australia</Heading>
+              <Heading size='md'>Junior Software Engineer</Heading>
+              <Text size='md'>
+                Building and maintaining a full-stack Python web application. Implementing C# and PHP scripts for broadcast tasks. 
+              </Text>
+            </CardBody>
+            <CardFooter>
+              <HStack spacing={4}>
+                {['C#', 'Python', 'PHP', 'SQL', 'Unix'].map((content) => (
+                  <Tag size='md' key={content} variant='subtle' colorScheme='blue'>
+                    <TagLabel>{content}</TagLabel>
+                  </Tag>
+                ))}
+              </HStack>
+            </CardFooter>
+          </Stack>
+        </Card>
+                */}
       <p/>
       <Cards>
         {data.map(post => {

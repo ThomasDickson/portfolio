@@ -23,9 +23,9 @@ function Navbar(props) {
   if(showButtons) {
     menu = (
       <ButtonGroup>
-        <Button as={Link} to="about-wrapper" spy={true} smooth={true} offset={-84} cursor='pointer'>About Me</Button>
-        <Button as={Link} to="projects-wrapper" spy={true} smooth={true} offset={-84} cursor='pointer'>Projects</Button>
-        <Button as={Link} to="contact-wrapper" spy={true} smooth={true} offset={-84} cursor='pointer'>Hire Me</Button>
+        <Button as={Link} to="about-wrapper" spy={true} smooth={true} cursor='pointer'>About Me</Button>
+        <Button as={Link} to="projects-wrapper" spy={true} smooth={true} cursor='pointer'>Projects</Button>
+        <Button as={Link} to="contact-wrapper" spy={true} smooth={true} cursor='pointer'>Hire Me</Button>
       </ButtonGroup>
     )
   } else {
@@ -36,7 +36,7 @@ function Navbar(props) {
     )
   }
   return (
-    <Box as="nav" p={4} boxShadow="sm" position="fixed" w='100%' backgroundColor="white">
+    <Box as="nav" p={4} boxShadow="sm" position="fixed" w='100%' backgroundColor="white" zIndex='999'>
       <HStack spacing="10" justify="space-between">
         <Button
           variant="link"
