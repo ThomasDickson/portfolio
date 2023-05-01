@@ -1,37 +1,65 @@
 import React from 'react'
-import styled from 'styled-components';
 
-import { FiGithub, FiInstagram, FiLinkedin} from 'react-icons/fi'
-import { IconContainer, Icon } from '../../components/Icons'
-import { Box, Heading, Text, Stack, Container, Divider } from '@chakra-ui/react';
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin} from 'react-icons/ai'
+import { Box,  Container, Text, Stack, Icon, SimpleGrid, IconButton, Button} from '@chakra-ui/react';
 
 function LandingInfo() {
   return (
-    <Container maxW='7xl' h='2xl' centerContent flexDirection="row">
+    <Container maxW='6xl' h='100vh' centerContent flexDirection="row">
       <Stack>
         <Box>
-          <Text fontSize='4xl'>Hi there!</Text>
-          <Heading as='h1' size='4xl'>I'm Thomas Dickson!</Heading>
-          <Heading as='h3' size='lg'>Software Developer</Heading>
-          <Text fontSize='xl'>I&#39;m a Computer Science student at the University of Wollongong, Australia and 
-              I&#39;m <br/>passionate about writing beautiful code!
-          </Text>
+          <Text fontSize='6xl'>Hi, I'm <b>Thomas Dickson.</b></Text>
+          <Text fontSize='3xl'>Back-end developer and student.</Text>
           <br />
-          <Divider />
         </Box>
-        <IconContainer>
-          <Icon href="https://github.com/ThomasDickson" target="_blank">
-            <FiGithub size={30}/>
-          </Icon>
-          <Icon href="https://www.linkedin.com/in/thomas-dickson-6a4a0a229/" target="_blank">
-            <FiLinkedin size={30}/>
-          </Icon>
-          <Icon href="https://instagram.com/tomdickson__" target="_blank">
-            <FiInstagram size={30}/>
-          </Icon>
-        </IconContainer>
+        <SimpleGrid columns={3} w='150px'>
+          <Button 
+            variant='none' 
+            as='a' 
+            href="https://github.com/ThomasDickson" 
+            target="_blank"
+            cursor='pointer'
+            transition='all 1s cubic-bezier(.08,.52,.52,1)'
+
+            _hover={{
+              borderRadius: '100%',
+              bg: '#ebedf0',
+            }}
+          >
+            <Icon as={AiFillGithub} boxSize={8}/>
+          </Button>
+          <Button 
+            variant='none' 
+            as='a' 
+            href="https://www.linkedin.com/in/thomas-dickson-6a4a0a229/" 
+            target="_blank"
+            cursor='pointer'
+            transition='all 1s cubic-bezier(.08,.52,.52,1)'
+
+            _hover={{
+              borderRadius: '100%',
+              bg: '#ebedf0',
+            }}
+          >
+            <Icon as={AiFillLinkedin} boxSize={8}/>
+          </Button>
+          <Button 
+            variant='none' 
+            as='a' 
+            href="https://instagram.com/tomdickson__" 
+            target="_blank"
+            cursor='pointer'
+            transition='all 1s cubic-bezier(.08,.52,.52,1)'
+
+            _hover={{
+              borderRadius: '100%',
+              bg: '#ebedf0',
+            }}
+          >
+            <Icon as={AiFillInstagram} boxSize={8}/>
+          </Button>
+        </SimpleGrid>
       </Stack>
-      {/*<Portrait src={portrait}/>*/}
     </Container>
   )
 }

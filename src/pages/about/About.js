@@ -1,5 +1,4 @@
 import React, { useRef } from 'react'
-import styled from 'styled-components'
 import mha from '../../images/mbmgbmvgkbkvkdjtqxsg.png'
 
 import { SiCplusplus, 
@@ -20,11 +19,11 @@ function About() {
   const iconSize = useRef(window.innerWidth).current > 860 ? 85: 50;
   
   return (
-    <Container maxW='7xl' h='8xl'>
+    <Container maxW='6xl' h='100vh'>
       <Heading as='h2' fontSize='5xl'>About Me</Heading>
       <SimpleGrid columns={{base: 1, md: 2}}>
         <Box>
-        < Text fontSize='xl'>Hi! I'm Thomas Dickson, a third year Computer Science student at the University of Wollongong, NSW, Australia.</Text>      
+          <Text fontSize='xl'>Hi! I'm Thomas Dickson, a third year Computer Science student at the University of Wollongong, NSW, Australia.</Text>      
         </Box>
         <Box>
           <Heading as='h3' fontSize='3xl'>Languages</Heading>
@@ -93,14 +92,13 @@ function About() {
             maxW={{ base: '100%', sm: '200px' }}
             src={mha}
             alt='MediaHub Australia Logo'
-          />
-
+        />
         <Stack>
           <CardBody>
             <Heading size='lg'>MediaHub Australia</Heading>
             <Heading size='md'>Junior Software Engineer</Heading>
             <Text size='md'>
-              Building and maintaining a full-stack Python web application. Implementing C# and PHP scripts for broadcast tasks.
+              Building and maintaining a full-stack Python web application. Implementing C# and PHP scripts for broadcast tasks. 
             </Text>
           </CardBody>
           <CardFooter>

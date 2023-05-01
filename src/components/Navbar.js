@@ -3,10 +3,7 @@ import styled from 'styled-components';
 import { NavLink} from 'react-router-dom'
 import { Link } from 'react-scroll'
 
-import { Box, Button, ButtonGroup, HStack, Heading } from '@chakra-ui/react';
-
-import { FilledButton, OutlineButton } from './Buttons';
-
+import { Box, Button, ButtonGroup, Container, HStack, Heading } from '@chakra-ui/react';
 import { IoIosArrowBack } from 'react-icons/io'
 
 const Icon = styled(NavLink)`
@@ -26,9 +23,9 @@ function Navbar(props) {
   if(showButtons) {
     menu = (
       <ButtonGroup>
-        <Button as={Link} to="about-wrapper" spy={true} smooth={true} offset={-84}>About Me</Button>
-        <Button as={Link} to="projects-wrapper" spy={true} smooth={true} offset={-84}>Projects</Button>
-        <Button as={Link} to="contact-wrapper" spy={true} smooth={true} offset={-84}>Hire Me</Button>
+        <Button as={Link} to="about-wrapper" spy={true} smooth={true} offset={-84} cursor='pointer'>About Me</Button>
+        <Button as={Link} to="projects-wrapper" spy={true} smooth={true} offset={-84} cursor='pointer'>Projects</Button>
+        <Button as={Link} to="contact-wrapper" spy={true} smooth={true} offset={-84} cursor='pointer'>Hire Me</Button>
       </ButtonGroup>
     )
   } else {
