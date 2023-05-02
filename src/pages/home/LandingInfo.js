@@ -10,6 +10,11 @@ const InfoContainer = styled.div`
     flex-direction: column;
     margin-top: 100px;
     height: 50vh;
+    width: 70%;
+
+    @media only screen and (max-width: 768px) {
+      width: 100%;
+    }
 `
 
 const Line = styled.hr`

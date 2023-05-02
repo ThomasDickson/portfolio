@@ -20,15 +20,19 @@ import { SiCplusplus,
 import { IconContainer, IconCaption } from '../../components/Icons'
 
 const Container = styled.div`
+  width: 70%;
   margin: 200px auto;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
+  @media only screen and (max-width: 860px) {
+    width: 100%;
+  }
 `
 
 const DynamicContainer = styled(IconContainer)`
   @media only screen and (max-width: 860px) {
-        grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 `
 

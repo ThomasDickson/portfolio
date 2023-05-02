@@ -33,9 +33,9 @@ const Form = styled.form`
   align-self: center;
   display: flex;
   flex-direction: column;
-  width: 40%;
+  width: 70%;
 
-  @media only screen and (max-width: 1000px) {
+  @media only screen and (max-width: 768px) {
     width: 100%;
   }
 `
@@ -103,7 +103,7 @@ function Contact() {
   return (
     <Container>
       <Form ref={form} onSubmit={sendEmail}>
-        <T1 style={{alignSelf: "center"}}>Contact Me</T1>
+        <T1>Contact Me</T1>
         <T4>Name</T4>
         <Input type="text" name="user_name"/>
         <T4>Email Address</T4>

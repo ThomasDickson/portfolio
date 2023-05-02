@@ -13,7 +13,7 @@ const Container = styled.div`
   margin: 200px auto;
   width: 70%;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 768px) {
     width: 100%;
   }
 `
@@ -21,7 +21,7 @@ const Container = styled.div`
 function Projects() {
   return (
     <Container>
-      <T1 style={{alignSelf: "center"}}>Projects</T1>
+      <T1>Projects</T1>
       <p/>
       <Cards>
         {data.map(post => {
