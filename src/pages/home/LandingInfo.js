@@ -18,16 +18,8 @@ function LandingInfo() {
               }}
             />
           </Text>
-          <Text fontSize='3xl'>
-            <TypeIt
-              getBeforeInit={(instance) => {
-                instance.type('Back-end developer and student.');
-
-                return instance;
-              }}
-            />
-          </Text>
-          
+          <Text fontSize='3xl'>Back-end developer and student.</Text>
+        
           <br />
         </Box>
         <SimpleGrid columns={3} w='200px' spacing={10}>
