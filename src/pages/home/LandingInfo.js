@@ -18,11 +18,9 @@ function LandingInfo() {
               }}
             />
           </Text>
-          <Text fontSize='3xl'>Back-end developer and student.</Text>
-        
-          <br />
+          <Text fontSize='3xl'>Software developer and student.</Text>
         </Box>
-        <SimpleGrid columns={3} w='200px' spacing={10}>
+        <SimpleGrid paddingTop='12px' columns={3} w='200px' spacing={10}>
           <Button
             variant='none' 
             as='a' 

@@ -17,13 +17,12 @@ function Home() {
       <div id="about-wrapper">
         <About />
       </div>
-      {/*
       <div id="projects-wrapper">
         <Projects />
       </div>
       <div id="contact-wrapper">
         <Contact />
-      </div>*/}
+      </div>
     </Stack>
   )
 }

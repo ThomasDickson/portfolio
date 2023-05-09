@@ -1,57 +1,81 @@
 import React from 'react'
-import styled from "styled-components";
 
-import { T3, T4 } from './Typography';
-import { IconContainer, Icon } from './Icons';
-import { FiGithub, FiInstagram, FiLinkedin} from 'react-icons/fi'
-
-const Container = styled.footer`
-    margin-top: 96px;
-    margin-left: -24px;
-    margin-right: -24px;
-    
-    height: 252px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    background-color: #41e2ba;
-    padding: 6px;
-`
-
-const IconCircle = styled.div`
-    padding: 18px;
-    display: flex;
-    align-items: center;
-    background-color: #2b2d42;
-    border-radius: 24px;;
-`
+import { Box, Button, Icon, SimpleGrid, Stack, Text} from '@chakra-ui/react'
+import { AiFillGithub, AiFillInstagram, AiFillLinkedin} from 'react-icons/ai'
 
 function Footer() {
   return (
-    <Container>
-      <T3>Find me at:</T3>
-      <IconContainer>
-        <IconCircle>
-          <Icon href="https://github.com/ThomasDickson" target="_blank">
-            <FiGithub size={30}/>
-          </Icon>
-        </IconCircle>
-        <IconCircle>
-        <Icon href="https://www.linkedin.com/in/thomas-dickson-6a4a0a229/" target="_blank">
-          <FiLinkedin size={30}/>
-        </Icon>
-        </IconCircle>
-        <IconCircle>
-        <Icon href="https://instagram.com/tomdickson__" target="_blank">
-          <FiInstagram size={30}/>
-        </Icon>
-        </IconCircle>
-      </IconContainer>
-      <T4>© Copyright 2023 Thomas Dickson. All Rights Reserved.</T4>
-    </Container>
+    <Box
+      bgColor='black'
+      height='30vh'
+      display='flex'
+      alignItems='center'
+      justifyContent='center'
+    >
+      <Stack alignItems='center'>
+        <Text color='white' fontSize='xl'>Find me at:</Text>
+        <SimpleGrid paddingTop='12px' columns={3} w='200px' spacing={10}>
+          <Button
+            variant='none' 
+            as='a' 
+            href="https://github.com/ThomasDickson" 
+            target="_blank"
+            cursor='pointer'
+            transition='all 0.1s ease-in-out'
+
+            _hover={{
+            
+            }}
+          >
+            <Icon
+              as={AiFillGithub} 
+              boxSize={8}
+              color='white'
+            />
+          </Button>
+          <Button 
+            variant='none' 
+            as='a' 
+            href="https://www.linkedin.com/in/thomas-dickson-6a4a0a229/" 
+            target="_blank"
+            cursor='pointer'
+            transition='all 1s cubic-bezier(.08,.52,.52,1)'
+
+            _hover={{
+              borderRadius: '100%',
+              bg: '#ebedf0',
+            }}
+          >
+            <Icon 
+              as={AiFillLinkedin} 
+              boxSize={8}
+              color='white'
+            />
+          </Button>
+          <Button 
+            variant='none' 
+            as='a' 
+            href="https://instagram.com/tomdickson__" 
+            target="_blank"
+            cursor='pointer'
+            transition='all 1s cubic-bezier(.08,.52,.52,1)'
+
+            _hover={{
+              borderRadius: '100%',
+              bg: '#ebedf0',
+            }}
+          >
+            <Icon 
+              as={AiFillInstagram} 
+              boxSize={8}
+              color='white'
+            />
+          </Button>
+        </SimpleGrid>
+        
+        <Text color='white'>© Copyright 2023 Thomas Dickson. All Rights Reserved.</Text>
+      </Stack>
+    </Box>
   )
 }
 

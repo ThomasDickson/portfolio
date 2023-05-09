@@ -5,11 +5,21 @@ export const theme = extendTheme({
         transparent: 'transparent',
         black: '#000',
         white: '#fff',
-        aquamarine: '#23f0c7ff',
-        coral: '#ef767aff',
-        indigo: '#7d7abcff',
-        violet: '#6457a6ff',
-        mustard: '#ffe347ff'
+        aquamarine: {
+            100: '#23f0c7ff'
+        },
+        coral: {
+            100: '#ef767aff'
+        },    
+        indigo: {
+            100: '#7d7abcff'
+        },
+        violet: {
+            100: '#6457a6ff'
+        },
+        mustard: {
+            100: '#ffe347ff'
+        }
     },
 })
 

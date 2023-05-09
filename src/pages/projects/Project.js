@@ -1,27 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
-import styled from 'styled-components';
 
 import Navbar from '../../components/Navbar';
-import { T2, T4 } from '../../components/Typography'
-import { FilledButton } from '../../components/Buttons';
-import { Card } from '../../components/Cards';
-import RatingBar from '../../components/RatingBar'
 
 import { projects } from './ProjectData'
-
-const Grid = styled.div`
-  display: grid;
-  grid-auto-flow: column;
-  grid-template-columns: 1fr 1fr;
-
-  gap: 24px;
-
-  @media only screen and (max-width: 1000px) {
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr 1fr;
-  }
-`
+import { Box, Button, ButtonGroup, Card, CardBody, Container, Heading, Progress, SimpleGrid, Stack, Table, Text, Td, Tr } from '@chakra-ui/react';
 
 function Project() {
   const url = useParams().url;
@@ -59,30 +42,57 @@ function Project() {
   return (
     <div className="project">
       <Navbar buttons={false}/>
-      <Grid>
-        <div className="info-box">
-          <T2>{title}</T2>
-          <T4>{desc}</T4>
-          <Card>
-            <T2>Development Languages</T2>
-            { // Render a Rating Bar for each language from JSON
-            langs.map(post => {
-              return (
-                <RatingBar desc={post.lang} percent={post.level}/>
-              )
-            })}
-          </Card>
-          <div style={{display: "flex", gap: "12px", marginTop: "12px"}}>
-            {git && (
-                <FilledButton as={'a'} href={git} target="_blank">View source</FilledButton>
-            )}
-            {live && (
-                <FilledButton as={'a'} href={live} target="_blank">View live</FilledButton>
-            )}
-          </div>
-        </div>
-        <img src={image} alt={alt} style={{width: "100%", borderRadius: "9px"}}/>
-      </Grid>
+      <Container maxW='6xl' h='100vh' centerContent flexDirection='row'>
+        <Stack>
+          <Heading fontSize='4xl'>{title}</Heading>
+          <SimpleGrid columns={{base: 1, md: 2}} gap='12px'>
+            <Box>
+              <Stack>
+                <Text fontSize='md'>{desc}</Text>
+                <Card variant='outline'>
+                  <CardBody>
+                    <Heading fontSize='2xl'>Development Languages</Heading>
+                    <Table>
+                    { // Render a Rating Bar for each language from JSON
+                    langs.map(post => {
+                      return (
+                        <Tr>
+                            <Td p={0}>
+                              <Text>{post.lang}</Text>
+                            </Td>
+                            <Td w='100%'>
+                              <Progress
+                                value={post.level}
+                                borderRadius='lg'
+                                colorScheme='blackAlpha'
+                              />
+                            </Td>
+                            <Td 
+                              isNumeric 
+                              alignItems='right'
+                              p={0}>
+                                <Text fontSize='sm'>{post.level}%</Text>
+                            </Td>
+                          </Tr>
+                      )
+                    })}
+                    </Table>
+                  </CardBody>
+                </Card>
+              <ButtonGroup>
+                {git && (
+                    <Button as={'a'} href={git} target="_blank">View source</Button>
+                )}
+                {live && (
+                    <Button as={'a'} href={live} target="_blank">View live</Button>
+                )}
+              </ButtonGroup>
+              </Stack>
+            </Box>
+            <img src={image} alt={alt} style={{width: "100%", borderRadius: "9px"}}/>
+          </SimpleGrid>
+        </Stack>
+      </Container>
     </div>
   )
 }

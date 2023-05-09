@@ -14,7 +14,7 @@ function App() {
           <Route exact path="/" element={<Home />}/>
           <Route exact path="/:url" element={<Project />}/>
         </Routes>
-        {/*<Footer />*/}
+        <Footer/>
       </BrowserRouter>
     </ChakraProvider>
   );
